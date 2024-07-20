@@ -1,13 +1,6 @@
-@use './variables' as *;
-
-@mixin tablet{
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-@mixin desktop{
-    @media screen and (min-width: 1440px) {
-        @content;
-    }
-}
+// Colors:
+$red: #FC4747;
+$darkBlue: #10141E;
+$greyishBlue: #5A698F;
+$semiDarkBlue: #161D2F;
+$pureWhite: #FFF;
