@@ -1,0 +1,13 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.header{
+    padding: 1rem;
+
+    &__logo{
+        width: 1.5625rem;
+        height: 1.25rem;
+        background-image: url('../../../public/logo.svg');
+        background-size: contain;
+    }
+}
