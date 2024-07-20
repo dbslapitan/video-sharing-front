@@ -6,6 +6,10 @@
     align-items: center;
     column-gap: 1.5rem;
 
+    @include tablet{
+        column-gap: 2rem;
+    }
+
     &__link{
         height: 1rem;
         width: 1rem;
