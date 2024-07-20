@@ -12,4 +12,11 @@
         background-image: url('../../../public/logo.svg');
         background-size: contain;
     }
+
+    &__profile{
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $pureWhite;
+        border-radius: 50%;
+    }
 }
