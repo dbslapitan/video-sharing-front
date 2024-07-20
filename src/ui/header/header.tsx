@@ -7,7 +7,7 @@ export default function Header(){
 
     return (
         <header className={style["header"]}>
-            <Link className={style["header__logo"]} href={'/preview'}>
+            <Link className={style["header__logo"]} href={'/'}>
             </Link>
             <Navigation/>
             <img className={`${style["header__profile"]}`} src={profilePic.src}/>
