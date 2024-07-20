@@ -12,6 +12,5 @@ export default function Header(){
             <Navigation/>
             <img className={`${style["header__profile"]}`} src={profilePic.src}/>
         </header>
-
     );
 }
