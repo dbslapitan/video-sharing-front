@@ -1,0 +1,29 @@
+@mixin heading-l{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@mixin heading-m{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@mixin heading-s{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@mixin heading-xs{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+@mixin body-m{
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+@mixin body-s{
+    font-size: 0.8125rem;
+    font-weight: 300;
+}
