@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.nav{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    &__link{
+        height: 1rem;
+        width: 1rem;
+        background-color: $greyishBlue;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+
+        &--home{
+            mask-image: url('../../../public/icons/icon-nav-home.svg');
+        }
+
+        &--movies{
+            mask-image: url('../../../public/icons/icon-nav-movies.svg');
+        }
+
+        &--tvs{
+            mask-image: url('../../../public/icons/icon-nav-tv-series.svg');
+        }
+
+        &--bookmarks{
+            mask-image: url('../../../public/icons/icon-nav-bookmark.svg');
+        }
+    }
+}
