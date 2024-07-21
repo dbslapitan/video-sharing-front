@@ -11,8 +11,6 @@ export default function Search(){
     const pathName = usePathname();
     const { replace } = useRouter();
 
-    const searchValue = searchParams.get('search') ? searchParams.get('search') : '';
-
     const handleChange = useDebouncedCallback((event: ChangeEvent) => {
         const value = (event.target as HTMLInputElement).value;
         const params = new URLSearchParams(searchParams);
