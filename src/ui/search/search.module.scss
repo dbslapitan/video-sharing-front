@@ -1,0 +1,36 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.input{
+    margin: 1.5rem 1rem 0 1rem;
+    display: flex;
+
+    &::before{
+        content: '';
+        display: block;
+        background-image: url('../../../public/icons/icon-search.svg');
+        width: 1.5rem;
+        height: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &__bar{
+        display: block;
+        width: 100%;
+        background-color: inherit;
+        border: none;
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.125rem;
+        margin-left: 1rem;
+        color: $pureWhite;
+
+        &:focus{
+            outline: none;
+            border-bottom: 1px solid $greyishBlue;
+            caret-color: $red;
+        }
+    }
+}
