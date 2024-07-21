@@ -14,6 +14,11 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+
+        @include tablet{
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     &__bar{
@@ -23,7 +28,7 @@
         border: none;
         font-size: 1rem;
         padding-bottom: 0.5rem;
-        padding-top: 0.125rem;
+        padding-top: 0.25rem;
         margin-left: 1rem;
         color: $pureWhite;
 
