@@ -3,11 +3,26 @@
 import { ChangeEvent } from "react";
 import style from "./search.module.scss";
 import { useDebouncedCallback } from "use-debounce";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function Search(){
 
+    const searchParams = useSearchParams();
+    const pathName = usePathname();
+    const { replace } = useRouter();
+
+    const searchValue = searchParams.get('search') ? searchParams.get('search') : '';
+
     const handleChange = useDebouncedCallback((event: ChangeEvent) => {
-        console.log((event.target as HTMLInputElement).value);
+        const value = (event.target as HTMLInputElement).value;
+        const params = new URLSearchParams(searchParams);
+        if(value){
+            params.set("search", value);
+        }
+        else{
+            params.delete("search");
+        }
+        replace(`${pathName}?${params.toString()}`);
     }, 400);
 
     return(
