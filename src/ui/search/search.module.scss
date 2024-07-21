@@ -4,6 +4,10 @@
 .input{
     margin: 1.5rem 1rem 0 1rem;
     display: flex;
+    
+    @include tablet{
+        margin: 2.125rem 1.5rem 0 1.5rem;
+    }
 
     &::before{
         content: '';
@@ -31,6 +35,12 @@
         padding-top: 0.25rem;
         margin-left: 1rem;
         color: $pureWhite;
+
+        @include tablet{
+            @include heading-m;
+            padding-bottom: 1rem;
+            margin-left: 1.5rem;
+        }
 
         &:focus{
             outline: none;
