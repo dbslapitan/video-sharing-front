@@ -1,0 +1,48 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.trending{
+    margin-top: 1.5rem;
+    
+
+    &__title{
+        font-size: 1.25rem;
+        font-weight: 400;
+        letter-spacing: -0.312px;
+        color: $pureWhite;
+        margin: 0 1rem;
+        
+        @include tablet{
+            margin: 0 1.5rem;
+        }
+    
+        @include desktop{
+            margin: 0 2.25rem;
+        }
+        
+    }
+
+    &__container{
+        margin-top: 1rem;
+        display: flex;
+        overflow-x: auto;
+        column-gap: 1rem;
+    }
+    
+    &__video{
+
+        &:first-of-type{
+            margin-left: 1rem;
+        }
+
+        &:last-of-type{
+            margin-right: 1rem;
+        }
+    }
+
+    &__cover{
+        max-width: 15rem;
+        max-height: 8.75rem;
+        border-radius: 0.5rem;
+    }
+}
