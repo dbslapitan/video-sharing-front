@@ -1,0 +1,14 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.logo{
+    width: 1.5625rem;
+    height: 1.25rem;
+    background-image: url('../../../public/logo.svg');
+    background-size: contain;
+
+    @include tablet{
+        width: 2rem;
+        height: 1.6rem;
+    }
+}

@@ -19,18 +19,6 @@
         justify-content: start;
     }
 
-    &__logo{
-        width: 1.5625rem;
-        height: 1.25rem;
-        background-image: url('../../../public/logo.svg');
-        background-size: contain;
-
-        @include tablet{
-            width: 2rem;
-            height: 1.6rem;
-        }
-    }
-
     &__profile{
         width: 1.5rem;
         height: 1.5rem;

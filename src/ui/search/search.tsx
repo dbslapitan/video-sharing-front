@@ -11,6 +11,8 @@ export default function Search(){
     const pathName = usePathname();
     const { replace } = useRouter();
 
+    const search = searchParams.get('search') || "";
+
     const handleChange = useDebouncedCallback((event: ChangeEvent) => {
         const value = (event.target as HTMLInputElement).value;
         const params = new URLSearchParams(searchParams);
@@ -25,7 +27,7 @@ export default function Search(){
 
     return(
         <div className={`${style["input"]}`}>
-            <input className={`${style["input__bar"]}`} type="text" placeholder="Search for movies or TV series" onChange={handleChange}/>
+            <input className={`${style["input__bar"]}`} defaultValue={search} type="text" placeholder="Search for movies or TV series" onChange={handleChange}/>
         </div>
     );
 }
