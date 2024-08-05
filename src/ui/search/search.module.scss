@@ -2,15 +2,15 @@
 @use "../../styles/variables" as *;
 
 .input{
-    margin: 0 1rem;
+    margin: 1.5rem 1rem;
     display: flex;
     
     @include tablet{
-        margin: 0 1.5rem;
+        margin: 2rem 1.5rem;
     }
 
     @include desktop{
-        margin: 0 2.25rem;
+        margin: 4rem 2.25rem;
     }
 
     &::before{
