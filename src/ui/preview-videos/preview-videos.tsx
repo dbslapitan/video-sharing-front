@@ -1,9 +1,9 @@
 import Trending from "../trending/trending";
 
-export default function PreviewVideos({ trending, recommendations }: { trending: IVideo[], recommendations: IVideo[]}){
+export default function PreviewVideos({ trending, recommendations, bookmarks }: { trending: IVideo[], recommendations: IVideo[], bookmarks: number[] }){
     return (
         <div>
-            <Trending videos={trending} />
+            <Trending videos={trending} bookmarks={bookmarks} />
         </div>
     );
 }
