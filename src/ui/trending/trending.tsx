@@ -8,7 +8,7 @@ export default function Trending({ videos }: {videos: IVideo[]}){
                 {
                     videos.map(video => {
                         return(
-                            <article className={`${style["trending__video"]}`}>
+                            <article key={video.id} className={`${style["trending__video"]}`}>
                                 <img className={`${style["trending__cover"]}`} src={video.source} />
                             </article>
                         );
