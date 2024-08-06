@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+
+.bookmark{
+    all: unset;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-color: #00000080;
+    border-radius: 1rem;
+    background-image: url("../../../public/icons/icon-bookmark-empty.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:checked{
+        background-image: url("../../../public/icons/icon-bookmark-full.svg");
+    }
+}
