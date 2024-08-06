@@ -44,3 +44,13 @@ main{
 a{
     display: block;
 }
+
+.oval{
+    display: inline-block;
+    min-width: 3px;
+    max-width: 3px;
+    min-height: 3px;
+    max-height: 3px;
+    background-color: $pureWhite;
+    opacity: 0.75;
+}
