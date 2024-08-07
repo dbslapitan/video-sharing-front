@@ -2,11 +2,21 @@
 
 import { ChangeEvent } from "react";
 import style from "./bookmark.module.scss";
+import axios from "axios";
+import { getBaseUrl } from "@/libs/constants";
 
-export default function Bookmark({ isBookmarked }: {isBookmarked: boolean}){
+const BASE_URL = getBaseUrl();
 
-    const changeHandler = (event: ChangeEvent) => {
-        
+export default function Bookmark({ isBookmarked, videoId }: {isBookmarked: boolean, videoId: number}){
+
+    const changeHandler = async (event: ChangeEvent) => {
+        try{
+            const {data} = await axios.post(`${BASE_URL}/api/preview/bookmark`, {userId: 0, videoId: videoId});
+        }
+        catch(e){
+            console.log(e);
+            (event.target as HTMLInputElement).checked = !(event.target as HTMLInputElement).checked;
+        }
     }
 
     return(
