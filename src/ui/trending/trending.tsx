@@ -1,4 +1,3 @@
-import Bookmark from '../bookmark/bookmark';
 import Video from '../video/video';
 import style from './trending.module.scss';
 

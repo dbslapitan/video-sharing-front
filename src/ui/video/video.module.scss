@@ -4,22 +4,6 @@
 .video{
     position: relative;
 
-    &:first-of-type{
-        margin-left: 1rem;
-
-        @include tablet{
-            margin-left: 1.5rem;
-        }
-
-        @include desktop{
-            margin-left: 2.25rem;
-        }
-    }
-
-    &:last-of-type{
-        margin-right: 1rem;
-    }
-
     &__cover{
         max-width: 15rem;
         max-height: 8.75rem;
@@ -29,21 +13,31 @@
             max-width: 29.375rem;
             max-height: 14.375rem;
         }
+
+        &--recommend{
+            max-width: clamp(10.25rem, 6.91rem + 14.249vw, 13.75rem);
+            max-height: clamp(6.875rem, 5.086rem + 7.634vw, 8.75rem);
+        }
     }
 
     &__title{
         position: absolute;
         font-size: 0.9375rem;
-        font-weight: 600;
+        font-weight: 400;
         color: $pureWhite;
         bottom: 1rem;
         left: 1rem;
 
         @include tablet{
             @include heading-s;
-            font-weight: 400;
             bottom: 1.5rem;
             left: 1.5rem;
+        }
+
+        &--recommend{
+            position: static;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
         }
     }
 
@@ -63,6 +57,12 @@
             @include body-m;
             left: 1.5rem;
             bottom: 3.5rem;
+        }
+
+        &--recommend{
+            position: static;
+            font-size: 0.6875rem;
+            margin-top: 0.5rem;
         }
     }
 
