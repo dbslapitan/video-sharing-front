@@ -73,6 +73,13 @@
         color: $pureWhite;
         bottom: 1rem;
         left: 1rem;
+
+        @include tablet{
+            @include heading-s;
+            font-weight: 400;
+            bottom: 1.5rem;
+            left: 1.5rem;
+        }
     }
 
     &__info{
@@ -86,6 +93,12 @@
         opacity: 0.75;
         column-gap: 0.5rem;
         align-items: center;
+
+        @include tablet{
+            @include body-m;
+            left: 1.5rem;
+            bottom: 3.5rem;
+        }
     }
 
     &__category{

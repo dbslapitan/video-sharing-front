@@ -11,10 +11,9 @@ export default function Bookmark({ isBookmarked, videoId }: {isBookmarked: boole
 
     const changeHandler = async (event: ChangeEvent) => {
         try{
-            const {data} = await axios.post(`${BASE_URL}/api/preview/bookmark`, {userId: 0, videoId: videoId});
+            await axios.post(`${BASE_URL}/api/preview/bookmark`, {userId: 0, videoId: videoId});
         }
         catch(e){
-            console.log(e);
             (event.target as HTMLInputElement).checked = !(event.target as HTMLInputElement).checked;
         }
     }

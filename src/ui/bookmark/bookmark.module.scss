@@ -20,4 +20,9 @@
     &:checked{
         background-image: url("../../../public/icons/icon-bookmark-full.svg");
     }
+
+    @include tablet{
+        right: 1.5rem;
+        top: 1rem;
+    }
 }
