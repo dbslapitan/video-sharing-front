@@ -3,6 +3,7 @@ import "./globals.scss";
 import { outfit } from "@/libs/fonts";
 import Header from "@/ui/header/header";
 import Search from "@/ui/search/search";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export const metadata: Metadata = {
   title: "Video Sharing | Dirk Brandon Lapitan",
@@ -16,13 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
-        <Header />
-        <main>
-          <Search />
-          {children}
-        </main>
-      </body>
+      <UserProvider>
+        <body className={outfit.className}>
+          <Header />
+          <main>
+            <Search />
+            {children}
+          </main>
+        </body>
+      </UserProvider>
     </html>
   );
 }
