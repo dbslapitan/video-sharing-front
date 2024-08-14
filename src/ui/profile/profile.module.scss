@@ -1,0 +1,28 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.profile{
+    &__image{
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $pureWhite;
+        border-radius: 50%;
+    
+        @include tablet{
+            width: 2rem;
+            height: 2rem;
+        }
+    
+        @include desktop{
+            margin-top: auto;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__auth{
+        @include desktop{
+            margin-top: auto;
+        }
+    }
+}

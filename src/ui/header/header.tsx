@@ -1,16 +1,19 @@
 import Link from "next/link";
 import style from "./header.module.scss";
 import Navigation from "../navigation/navigation";
-import profilePic from "../../../public/image-avatar.png";
 import Logo from "../logo/logo";
+import Profile from "../profile/profile";
+import { getSession, Session } from "@auth0/nextjs-auth0";
 
-export default function Header(){
+export default async function Header(){
+
+      const session = await  getSession();
 
     return (
         <header className={style["header"]}>
             <Logo />
             <Navigation/>
-            <img className={`${style["header__profile"]}`} src={profilePic.src}/>
+            <Profile user={session?.user} />
         </header>
     );
 }
