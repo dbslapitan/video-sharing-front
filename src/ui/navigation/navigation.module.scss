@@ -47,5 +47,9 @@
         &--selected{
             background-color: $pureWhite;
         }
+
+        &:hover{
+            background-color: $red;
+        }
     }
 }
