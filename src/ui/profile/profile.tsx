@@ -2,7 +2,7 @@
 
 import style from "./profile.module.scss";
 import profilePic from "../../../public/image-avatar.png";
-import isPreview from "@/libs/url";
+import { isPreview } from "@/libs/url";
 import { Claims } from "@auth0/nextjs-auth0";
 
 export default function Profile({user}: {user: Claims | undefined}){
